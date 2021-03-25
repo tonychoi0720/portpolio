@@ -104,6 +104,7 @@ button {
   color: var(--color-white);
   padding: 8px;
   transition: all var(--annimation-duration) ease-in-out;
+  z-index: 1;
 }
 
 #navbar.navbar-dark {
