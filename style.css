@@ -477,6 +477,25 @@ button {
   transition: all var(--annimation-duration) ease-in;
 }
 
+/* scroll */
+.arrow-up {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  font-size: 30px;
+  color: var(--color-white);
+  background-color: var(--color-light-grey);
+  border-radius: 50%;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--annimation-duration) ease-in;
+}
+
+.arrow-up.visible {
+  opacity: 1;
+  pointer-events: painted;
+}
+
 /* for below 768px screen width */
 
 @media screen and (max-width: 768px) {
