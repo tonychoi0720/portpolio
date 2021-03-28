@@ -174,6 +174,12 @@ button {
   border-radius: var(--size-border-radius);
 }
 
+.home__contact:hover {
+  background-color: var(--color-white);
+  border-color: var(--color-orange);
+  color: var(--color-orange);
+}
+
 /* Section common */
 .section {
   padding: 50px;
@@ -318,6 +324,7 @@ button {
   border-radius: var(--size-border-radius);
   font-size: var(--font-regular);
   padding: 8px 48px;
+  position: relative;
 }
 
 .category__btn.selected,
@@ -329,7 +336,7 @@ button {
 .category__btn.selected .category__count,
 .category__btn:hover .category__count {
   opacity: 1;
-  top: 0;
+  top: 5px;
 }
 
 .category__count {
@@ -340,9 +347,9 @@ button {
   height: 24px;
   display: inline-block;
   line-height: 24px;
-  position: relative;
+  position: absolute;
   top: -20px;
-  left: 4px;
+  right: 10px;
   opacity: 0;
   transition: all var(--annimation-duration) ease-in;
 }
@@ -385,7 +392,7 @@ button {
   background-color: black;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: ceSnter;
   width: 100%;
   height: 100%;
   top: 0;
@@ -508,6 +515,15 @@ button {
 /* for below 768px screen width */
 
 @media screen and (max-width: 768px) {
+  :root {
+    /* Font size */
+    --font-large: 30px;
+    --font-medium: 18px;
+    --font-regular: 16px;
+    --font-small: 14px;
+    --font-micro: 12px;
+  }
+
   .navbar__toggle-btn {
     display: block;
   }
@@ -528,12 +544,27 @@ button {
     display: block;
   }
 
+  .navbar__toggle-btn {
+    top: 18px;
+    right: 18px;
+  }
+
+  #home {
+    padding: 80px 16px 16px 16px;
+  }
+
+  .section {
+    padding: 16px;
+    padding-top: 50px;
+  }
+
   .about__majors {
     flex-direction: column;
+    margin: 20px 0px 0px 0px;
   }
 
   .major {
-    margin-bottom: 38px;
+    margin-bottom: 20px;
   }
 
   .major__icon {
@@ -544,12 +575,49 @@ button {
     flex-direction: column;
   }
 
+  .category__btn {
+    padding: 8px 36px;
+  }
+
   .project {
     flex-grow: 1;
+  }
+
+  .work__categories {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .category__count {
+    right: 40px;
+  }
+
+  .testimonial {
+    flex-direction: column;
+    align-items: center;
   }
 
   .testimonial__avartar {
     width: 80px;
     height: 80px;
+  }
+
+  .testimonial.neytiri {
+    flex-direction: column-reverse;
+  }
+
+  .testimonial__avartar:nth-child(odd),
+  .testimonial__avartar:nth-child(even) {
+    margin: 0;
+    margin-bottom: 8px;
+  }
+
+  .arrow-up {
+    bottom: 15px;
+    right: 15px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    font-size: var(--font-medium);
   }
 }
